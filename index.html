@@ -834,7 +834,7 @@ async function deployFilesDirectly(name, token) {
     const path = file.webkitRelativePath
       ? file.webkitRelativePath.split('/').slice(1).join('/')
       : file.name;
-    files.push({ file: path, data: content, encoding: 'utf8' });
+    files.push({ file: path, data: content, encoding: 'utf-8' });
   }
 
   const res = await fetch('https://api.vercel.com/v13/deployments', {
